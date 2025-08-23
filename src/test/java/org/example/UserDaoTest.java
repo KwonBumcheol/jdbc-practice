@@ -1,11 +1,12 @@
 package org.example;
 
-import org.h2.engine.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
+
+import java.sql.SQLException;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -21,8 +22,8 @@ public class UserDaoTest {
     }
 
     @Test
-    void createTest() {
-        UserDao userDao = new UserDao(); // Dao = Data access object -- usarDao 클래스 생성
+    void createTest() throws SQLException {
+        UserDao userDao = new UserDao(); // Dao = Data access object -- userDao 클래스 생성
 
         userDao.create(new User("wizard", "password", "name", "email")); // DB 저장
 

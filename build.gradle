@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     implementation 'com.zaxxer:HikariCP:5.0.1'
-    implementation 'org.springframework:spring-jdbc:5.3.22'
+    implementation 'org.springframework:spring-jdbc:5.3.39'
 
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
@@ -19,7 +19,7 @@ dependencies {
 
     testImplementation 'org.assertj:assertj-core:3.22.0' // 코드 가독성⬆
 
-    testImplementation 'com.h2database:h2:2.1.214' // InMemory DB - 데이터베이스
+    testImplementation 'com.h2database:h2:2.3.232' // InMemory DB - 데이터베이스
 }
 
 test {
